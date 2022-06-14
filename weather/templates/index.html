@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en"></html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title> Weather API</title>
+</head>
+<body>
+    <h1>Weather API</h1>
+    <h2>Welcome to my API</h2>
+
+    <p>Search for the name of your city:</p>
+
+    <form method="POST" action='/weather'>{% csrf_token %}
+            <input type="text" name="cityname" list="browsers">
+                <datalist id="browsers">
+                </datalist>
+            <input type="submit" name="submit">
+
+    </form>
+
+            <p>City: {{ city }}</p>
+            <p>Country: {{ country }}</p>
+            <p>Temperature: {{ temp }} Cº</p>
+            <p>Humidity: {{ humidity }}%</p>
+            <p>Pressure: {{ pressure }}</p>
+            <p>Forecast: {{ report }}</p>
+
+</body>
+
+
